@@ -8,24 +8,18 @@
 </head>
 <body>
   <script>
-    // 变量作用域
-    function fn() {
-      var num = 10
+    f1();
+    console.log(a)
+    console.log(b)
+    console.log(c)
+    function f1() {
+      // 以下两中结果分别是多少？
+      var a = b = c = 9;
+      // var a = 9, b = 9, c = 9;
+      console.log(a)
+      console.log(b)
+      console.log(c)
     }
-    fn()
-    console.log(num)
-
-    function fun() {
-      var num1 = 10
-    }
-    fun()
-    console.log(num1)
-
-    // 块级作用域
-    if (3 < 5) {
-      var num = 10
-    }
-    console.log(num)
   </script>
 </body>
 </html>
