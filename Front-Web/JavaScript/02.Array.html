@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Array</title>
+</head>
+<body>
+  <script>
+    var array = ['apple', 'banana'];
+    array.push('pear');
+    array.unshift('orange', 'pea');
+    console.log(array);
+
+    // splice() 方法通过删除或替换现有元素或者原地添加新的元素来修改数组,
+    // 并以数组形式返回被修改的内容。此方法会改变原数组。
+    var newArray = array.splice(1, 2);
+    console.log(array);
+    console.log(newArray);
+    console.log('------------');
+
+    var months = ['Jan', 'March', 'April', 'June'];
+    months.splice(1, 0, 'Feb');
+    // inserts at index 1
+    console.log(months);
+    // expected output: Array ['Jan', 'Feb', 'March', 'April', 'June']
+    months.splice(4, 1, 'May');
+    // replaces 1 element at index 4
+    console.log(months);
+    // expected output: Array ['Jan', 'Feb', 'March', 'April', 'May']
+    months.splice(2, 2);
+    // expected output: Array ['Jan', 'Feb', 'May']
+    console.log(months);
+    console.log('------------');
+
+    // slice() 方法返回一个新的数组对象，这一对象是一个由 begin 和 end 决定的原数组的浅拷贝
+    // （包括 begin，不包括end）。原始数组不会被改变。
+    var animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+    console.log(animals.slice(2));
+    // expected output: Array ["camel", "duck", "elephant"]
+    console.log(animals.slice(2, 4));
+    // expected output: Array ["camel", "duck"]
+    console.log(animals.slice(1, 5));
+    // expected output: Array ["bison", "camel", "duck", "elephant"]
+  </script>
+</body>
+</html>
